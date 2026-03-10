@@ -1,0 +1,27 @@
+# Environment variables - NEVER commit these
+.env
+.env.*
+todo-app/backend/.env
+todo-app/backend/.env.*
+todo-app/frontend/.env
+todo-app/frontend/.env.*
+
+# Node modules
+node_modules/
+todo-app/backend/node_modules/
+todo-app/frontend/node_modules/
+
+# React build output
+todo-app/frontend/build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Assignment files (local only)
+A1.txt
+DEPLOYMENT_DOCUMENTATION.md

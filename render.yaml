@@ -1,0 +1,38 @@
+services:
+  # Backend Web Service
+  - type: web
+    name: be-todo
+    runtime: image
+    image:
+      url: docker.io/sevenkels/be-todo:02230285
+    plan: free
+    region: singapore
+    autoDeploy: true
+    envVars:
+      - key: DB_HOST
+        value: SET_VIA_RENDER_DASHBOARD
+      - key: DB_USER
+        value: SET_VIA_RENDER_DASHBOARD
+      - key: DB_PASSWORD
+        value: SET_VIA_RENDER_DASHBOARD
+      - key: DB_NAME
+        value: SET_VIA_RENDER_DASHBOARD
+      - key: DB_PORT
+        value: "5432"
+      - key: DB_SSL
+        value: "true"
+      - key: PORT
+        value: "5000"
+
+  # Frontend Web Service
+  - type: web
+    name: fe-todo
+    runtime: image
+    image:
+      url: docker.io/sevenkels/fe-todo:02230285
+    plan: free
+    region: singapore
+    autoDeploy: true
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://be-todo-ppwq.onrender.com

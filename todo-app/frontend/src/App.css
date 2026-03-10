@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 580px;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    color: #4a4a6a;
+    margin-bottom: 24px;
+    font-size: 2rem;
+}
+
+.error-banner {
+    background: #ffe0e0;
+    color: #c00;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error-banner button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #c00;
+}
+
+.add-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 24px;
+}
+
+.add-form input {
+    flex: 1;
+    padding: 12px 16px;
+    border: 2px solid #e0e0f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.add-form input:focus {
+    border-color: #667eea;
+}
+
+.add-form button {
+    padding: 12px 22px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.add-form button:hover {
+    background: #5567d5;
+}
+
+.loading,
+.empty {
+    text-align: center;
+    color: #888;
+    padding: 20px 0;
+}
+
+.todo-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.todo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #f8f8ff;
+    border-radius: 10px;
+    padding: 12px 14px;
+    transition: background 0.2s;
+}
+
+.todo-item.completed .todo-title {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.todo-item input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.todo-title {
+    flex: 1;
+    font-size: 1rem;
+    color: #333;
+    word-break: break-word;
+}
+
+.edit-group {
+    flex: 1;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.edit-group input {
+    flex: 1;
+    padding: 6px 10px;
+    border: 2px solid #667eea;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.actions {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+}
+
+.btn-edit,
+.btn-delete,
+.btn-save,
+.btn-cancel {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 6px 10px;
+    font-size: 0.9rem;
+    transition: opacity 0.2s;
+}
+
+.btn-edit {
+    background: #e8eaff;
+}
+
+.btn-delete {
+    background: #ffe8e8;
+}
+
+.btn-save {
+    background: #e8ffe8;
+    color: #2a7a2a;
+}
+
+.btn-cancel {
+    background: #f0f0f0;
+    color: #666;
+}
+
+.btn-edit:hover,
+.btn-delete:hover,
+.btn-save:hover,
+.btn-cancel:hover {
+    opacity: 0.75;
+}
+
+.count {
+    text-align: center;
+    margin-top: 20px;
+    color: #888;
+    font-size: 0.9rem;
+}
